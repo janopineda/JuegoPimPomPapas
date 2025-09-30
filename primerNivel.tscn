@@ -8,33 +8,29 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fldp8")
 
+[node name="barril" parent="." instance=ExtResource("3_t5oh4")]
+position = Vector2(381, -574)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_14ro4")]
-position = Vector2(344, -490)
+position = Vector2(594, 398)
 
-[node name="RigidBody2D" parent="." instance=ExtResource("3_t5oh4")]
-position = Vector2(314, 120)
-linear_velocity = Vector2(0, 0)
-
-[node name="RigidBody2D2" parent="." instance=ExtResource("3_t5oh4")]
-position = Vector2(482, -60)
-
-[node name="RigidBody2D3" parent="." instance=ExtResource("3_t5oh4")]
-position = Vector2(571, -211)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(11, 17)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("4_v2gma")]
 position = Vector2(725, 1148)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("4_v2gma")]
-position = Vector2(292, 584)
+position = Vector2(230, 579)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("4_v2gma")]
-position = Vector2(173, 582)
+position = Vector2(378, 516)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("4_v2gma")]
-position = Vector2(418, 586)
+position = Vector2(504, 563)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("4_v2gma")]
-position = Vector2(543, 586)
+position = Vector2(629, 578)
 
 [node name="StaticBody2D6" parent="." instance=ExtResource("4_v2gma")]
-position = Vector2(668, 584)
+position = Vector2(741, 600)
