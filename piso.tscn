@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvbuvmmfshd5m"]
 
-[ext_resource type="Texture2D" uid="uid://glg5sxsvuul7" path="res://icon.svg" id="1_ho27h"]
+[ext_resource type="Texture2D" uid="uid://bsahnnukycxgx" path="res://imagenes/plataforma/plataforma .png" id="1_ho27h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rf48w"]
-size = Vector2(121, 122)
+size = Vector2(121, 16)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
@@ -11,5 +11,5 @@ size = Vector2(121, 122)
 texture = ExtResource("1_ho27h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 0)
+position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_rf48w")
