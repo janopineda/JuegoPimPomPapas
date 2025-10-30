@@ -1,9 +1,22 @@
-[gd_scene load_steps=28 format=3 uid="uid://dywbuqaps1xef"]
+[gd_scene load_steps=32 format=3 uid="uid://dywbuqaps1xef"]
 
 [ext_resource type="Script" uid="uid://vb5nghfnllt5" path="res://player_une.gd" id="1_rve5o"]
 [ext_resource type="Texture2D" uid="uid://dfmcvt01t66lk" path="res://imagenes/perso/little-man-idel.png" id="2_7vne2"]
+[ext_resource type="Texture2D" uid="uid://dglu4myducqi5" path="res://imagenes/perso/little-man-dah.png" id="2_aeo4a"]
 [ext_resource type="Texture2D" uid="uid://cg1jhykqplt8u" path="res://imagenes/perso/little-man-1.png" id="2_rve5o"]
 [ext_resource type="Texture2D" uid="uid://buhamlj2tqf3i" path="res://imagenes/perso/little-man-jump.png" id="3_jjt0a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52g3e"]
+atlas = ExtResource("2_aeo4a")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1vjb"]
+atlas = ExtResource("2_aeo4a")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rllem"]
+atlas = ExtResource("2_aeo4a")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jjt0a"]
 atlas = ExtResource("2_7vne2")
@@ -93,6 +106,20 @@ region = Rect2(64, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_52g3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1vjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rllem")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_jjt0a")
 }, {
 "duration": 1.0,
@@ -174,15 +201,15 @@ animations = [{
 radius = 18.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(5, 0)
+position = Vector2(24, -7)
 script = ExtResource("1_rve5o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4, -12)
+position = Vector2(-24, 7)
 scale = Vector2(1.78125, 1.78125)
 sprite_frames = SubResource("SpriteFrames_uug8s")
-animation = &"jump"
+animation = &"dash"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -9)
+position = Vector2(-25, 8)
 shape = SubResource("CircleShape2D_rve5o")
